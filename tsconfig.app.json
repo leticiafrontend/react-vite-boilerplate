@@ -31,7 +31,7 @@
       "@modules": ["./modules/*"],
       "@pages/*": ["./pages/*"],
       "@routes": ["./routes/*"],
-      "@store": ["./store/*"],
+      "@stores": ["./stores/*"],
       "@styles": ["./styles/*"],
       "@utils": ["./utils/*"]
     }

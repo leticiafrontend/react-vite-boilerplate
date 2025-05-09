@@ -1,4 +1,8 @@
+import { useStore } from '@stores'
+
 export const Home = () => {
+  const bears = useStore((state) => state.bears)
+
   return (
     <div className="flex flex-col items-center justify-center h-screen w-screen gap-4 bg-zinc-900 px-5">
       <h1 className="text-4xl font-bold text-white">
@@ -6,10 +10,18 @@ export const Home = () => {
       </h1>
       <p className="text-2xl text-white text-center max-w-[600px]">
         A boilerplate for React + Vite + TypeScript + TailwindCSS + ESLint +
-        Prettier + React Router DOM + Zustand + Framer Motion + React Query +
-        React Hook Form
+        Prettier + Husky + Lint Staged + Commitlint + React Router DOM + Zustand
+        + Framer Motion + React Query + React Hook Form + Zod
       </p>
       <p className="text-xl text-white">By Letícia Alexandre</p>
+
+      <p className="text-2xl text-white">{bears}</p>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+        onClick={() => useStore.setState({ bears: bears + 1 })}
+      >
+        Add
+      </button>
     </div>
   )
 }
