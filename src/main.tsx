@@ -6,7 +6,7 @@ import { RouterProvider } from 'react-router-dom'
 
 import { queryClient } from '@services/https-service/query-client'
 
-import './index.css'
+import '@styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
