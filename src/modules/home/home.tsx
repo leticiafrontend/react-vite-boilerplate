@@ -39,6 +39,7 @@ export const Home = () => {
   const { getUser, isLoading, error } = useGetUser()
   const bears = useStore((state) => state.bears)
   const [activeTab, setActiveTab] = useState('dev-tools')
+  const [typingComplete, setTypingComplete] = useState(false)
 
   const {
     register,
@@ -86,17 +87,50 @@ export const Home = () => {
         className="max-w-6xl mx-auto"
       >
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            React Vite Boilerplate
-          </h1>
-          <h2 className="text-2xl font-semibold text-white mb-4">
+          <motion.h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 min-h-[4rem]">
+            {'React Vite Boilerplate'.split('').map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.05,
+                  delay: index * 0.08,
+                  onComplete:
+                    index === 'React Vite Boilerplate'.length - 1
+                      ? () => setTimeout(() => setTypingComplete(true), 300)
+                      : undefined,
+                }}
+                style={{ display: 'inline-block' }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </motion.span>
+            ))}
+          </motion.h1>
+          <motion.h2
+            className="text-2xl font-semibold text-white mb-4"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{
+              opacity: typingComplete ? 1 : 0,
+              y: typingComplete ? 0 : 10,
+            }}
+            transition={{ duration: 0.5 }}
+          >
             A modern React starter kit with all the tools you need to build
             amazing applications
-          </h2>
-          <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-6">
+          </motion.h2>
+          <motion.p
+            className="text-xl text-zinc-300 max-w-3xl mx-auto mb-6"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{
+              opacity: typingComplete ? 1 : 0,
+              y: typingComplete ? 0 : 10,
+            }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             Interactive demonstration of the features included in this
             boilerplate
-          </p>
+          </motion.p>
           <a
             href="https://github.com/leticiafrontend/react-vite-boilerplate"
             target="_blank"
