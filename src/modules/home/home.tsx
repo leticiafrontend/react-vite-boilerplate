@@ -1,7 +1,9 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useStore } from '@stores'
+import { useStore } from '@stores/user'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+
+import { useGetUser } from '@services/user'
 
 const formSchema = z.object({
   name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
@@ -11,6 +13,8 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>
 
 export const Home = () => {
+  const { getUser } = useGetUser()
+
   const bears = useStore((state) => state.bears)
 
   const {
@@ -86,6 +90,13 @@ export const Home = () => {
           Enviar
         </button>
       </form>
+
+      <button
+        onClick={() => getUser()}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        Teste
+      </button>
     </div>
   )
 }
