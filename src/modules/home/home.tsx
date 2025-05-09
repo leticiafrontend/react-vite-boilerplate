@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useStore } from '@stores/user'
+import { motion } from 'motion/react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
@@ -13,7 +14,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>
 
 export const Home = () => {
-  const { getUser } = useGetUser()
+  const { getUser, isLoading, error } = useGetUser()
 
   const bears = useStore((state) => state.bears)
 
@@ -91,12 +92,28 @@ export const Home = () => {
         </button>
       </form>
 
-      <button
-        onClick={() => getUser()}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
-        Teste
-      </button>
+        {error && <p className="text-red-500">{error.message}</p>}
+
+        <button
+          onClick={() => getUser()}
+          className="bg-blue-500 text-white px-4 py-2 rounded"
+          disabled={isLoading}
+        >
+          {isLoading ? 'Carregando...' : 'Teste'}
+        </button>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="w-12 h-12 bg-blue-500 rounded"
+      />
     </div>
   )
 }
