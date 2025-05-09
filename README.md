@@ -21,7 +21,7 @@ This boilerplate includes the following technologies and tools:
 
 ### 🎨 UI and Animations
 
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for fast and responsive design
+- [Tailwind CSS3](https://v3.tailwindcss.com/) - Utility-first CSS framework for fast and responsive design
 - [Framer Motion](https://www.framer.com/motion/) - Library for fluid and interactive animations
 - [Phosphor Icons](https://phosphoricons.com/) - Flexible and consistent icon set
 
