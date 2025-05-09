@@ -28,11 +28,11 @@
       "@assets": ["./assets/*"],
       "@components": ["./components/*"],
       "@hooks": ["./hooks/*"],
-      "@modules": ["./modules/*"],
+      "@modules": ["./modules"],
       "@pages/*": ["./pages/*"],
-      "@routes": ["./routes/*"],
+      "@routes": ["./routes"],
       "@services/*": ["./services/*"],
-      "@stores": ["./stores/*"],
+      "@stores/*": ["./stores/*"],
       "@styles": ["./styles/*"],
       "@utils": ["./utils/*"]
     }

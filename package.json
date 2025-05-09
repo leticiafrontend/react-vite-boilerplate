@@ -32,7 +32,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "yarn fix"
+      "prettier --write",
+      "eslint . --ext .ts,.tsx --fix"
     ]
   },
   "devDependencies": {

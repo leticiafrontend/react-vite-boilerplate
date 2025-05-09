@@ -14,13 +14,13 @@ import {
   Sparkle,
   Wrench,
 } from '@phosphor-icons/react'
-import { useStore } from '@stores/user'
 import { AnimatePresence, motion } from 'motion/react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 import { useGetUser } from '@services/user'
+import { useStore } from '@stores/user'
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must have at least 2 characters'),
@@ -99,7 +99,6 @@ export const Home = () => {
           </p>
         </div>
 
-        {/* Animated Tabs */}
         <div className="mb-8">
           <div className="flex justify-center mb-1">
             <motion.div
@@ -139,7 +138,6 @@ export const Home = () => {
           </div>
         </div>
 
-        {/* Tab Content */}
         <div className="bg-zinc-800/30 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50 shadow-xl h-[calc(100vh-445px)] min-h-[400px] max-h-[800px] overflow-hidden">
           <AnimatePresence mode="wait">
             {activeTab === 'dev-tools' && (
@@ -974,7 +972,17 @@ export const useGetUser = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        <p>Developed by Letícia Alexandre</p>
+        <p>
+          Developed by{' '}
+          <a
+            href="https://github.com/leticiaalexandre"
+            className="text-white hover:text-gray-500 transition-colors ease-in-out duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Letícia Alexandre
+          </a>
+        </p>
       </motion.div>
     </div>
   )
