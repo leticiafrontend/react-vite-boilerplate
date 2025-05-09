@@ -93,10 +93,19 @@ export const Home = () => {
             A modern React starter kit with all the tools you need to build
             amazing applications
           </h2>
-          <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+          <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-6">
             Interactive demonstration of the features included in this
             boilerplate
           </p>
+          <a
+            href="https://github.com/leticiafrontend/react-vite-boilerplate"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 border border-zinc-700 shadow-md"
+          >
+            <GitCommit size={20} weight="duotone" />
+            View on GitHub
+          </a>
         </div>
 
         <div className="mb-8">
@@ -138,7 +147,7 @@ export const Home = () => {
           </div>
         </div>
 
-        <div className="bg-zinc-800/30 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50 shadow-xl h-[calc(100vh-445px)] min-h-[400px] max-h-[800px] overflow-hidden">
+        <div className="bg-zinc-800/30 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50 shadow-xl h-[600px] overflow-hidden">
           <AnimatePresence mode="wait">
             {activeTab === 'dev-tools' && (
               <motion.div
@@ -224,7 +233,7 @@ export const Home = () => {
                         <div className="bg-gradient-to-r from-teal-500 to-teal-700 p-2 rounded-lg">
                           <PaintBucket size={24} weight="duotone" />
                         </div>
-                        <h3 className="text-xl font-semibold">Tailwind CSS</h3>
+                        <h3 className="text-xl font-semibold">Tailwind CSS3</h3>
                       </div>
                       <p className="text-zinc-300 text-sm">
                         A utility-first CSS framework that allows for rapid UI
@@ -864,13 +873,13 @@ export const useGetUser = () => {
                           </li>
                           <li>
                             <a
-                              href="https://tailwindcss.com/docs"
+                              href="https://v3.tailwindcss.com/docs/installation"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                             >
                               <PaintBucket size={18} weight="duotone" />
-                              Tailwind CSS Documentation
+                              Tailwind CSS3 Documentation
                             </a>
                           </li>
                         </ul>
