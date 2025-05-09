@@ -2,6 +2,9 @@
 
 A modern boilerplate for React with TypeScript, Vite, and several essential tools for high-quality web application development.
 
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/91bfde0b-6bb6-4fb7-9aea-f3c663ca9e19" />
+
+
 ## 🚀 Technologies
 
 This boilerplate includes the following technologies and tools:
