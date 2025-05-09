@@ -1,8 +1,13 @@
 {
   "name": "react-vite-boilerplate",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
+  "author": {
+    "name": "Letícia Alexandre",
+    "url": "https://github.com/leticiafrontend"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

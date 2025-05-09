@@ -78,7 +78,7 @@ export const Home = () => {
   ]
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-zinc-900 to-zinc-800 px-5 py-10">
+    <div className="min-h-screen w-full bg-gradient-to-br from-zinc-900 to-zinc-800 px-5 pt-20 pb-10">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export const Home = () => {
         className="max-w-6xl mx-auto"
       >
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
             React Vite Boilerplate
           </h1>
           <h2 className="text-2xl font-semibold text-white mb-4">
@@ -140,7 +140,7 @@ export const Home = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="bg-zinc-800/30 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50 shadow-xl h-[calc(100vh-400px)] min-h-[400px] max-h-[800px] overflow-hidden">
+        <div className="bg-zinc-800/30 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50 shadow-xl h-[calc(100vh-445px)] min-h-[400px] max-h-[800px] overflow-hidden">
           <AnimatePresence mode="wait">
             {activeTab === 'dev-tools' && (
               <motion.div
