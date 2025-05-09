@@ -68,7 +68,7 @@ export const Home = () => {
     },
     {
       id: 'react-query',
-      title: 'React Query',
+      title: 'TanStack Query',
       icon: <Atom weight="duotone" />,
     },
     {
@@ -346,6 +346,46 @@ export const Home = () => {
                         A tool that enforces a conventional commit message
                         format, making it easier to generate changelogs and
                         navigate project history.
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      className="bg-zinc-700/50 p-5 rounded-lg flex flex-col gap-3"
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-r from-orange-500 to-orange-700 p-2 rounded-lg">
+                          <Link size={24} weight="duotone" />
+                        </div>
+                        <h3 className="text-xl font-semibold">
+                          React Router DOM
+                        </h3>
+                      </div>
+                      <p className="text-zinc-300 text-sm">
+                        A collection of navigational components that compose
+                        declaratively with your application, allowing you to
+                        implement dynamic routing in a web app.
+                      </p>
+                    </motion.div>
+
+                    <motion.div
+                      className="bg-zinc-700/50 p-5 rounded-lg flex flex-col gap-3"
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-r from-indigo-500 to-indigo-700 p-2 rounded-lg">
+                          <Sparkle size={24} weight="duotone" />
+                        </div>
+                        <h3 className="text-xl font-semibold">
+                          Phosphor Icons
+                        </h3>
+                      </div>
+                      <p className="text-zinc-300 text-sm">
+                        A flexible icon family for interfaces, diagrams,
+                        presentations — whatever, really. Highly customizable
+                        and easy to use.
                       </p>
                     </motion.div>
                   </div>
@@ -675,10 +715,10 @@ const { register, handleSubmit, errors } =
               >
                 <div className="flex flex-col items-center gap-6 p-4">
                   <h2 className="text-3xl font-bold text-center flex items-center gap-2">
-                    React Query
+                    TanStack Query
                   </h2>
                   <p className="text-zinc-300 text-center max-w-2xl mb-4">
-                    React Query for server state management and data caching.
+                    TanStack Query for server state management and data caching.
                   </p>
 
                   <motion.div
@@ -741,7 +781,7 @@ const { register, handleSubmit, errors } =
 
                   <div className="bg-zinc-800/80 p-4 rounded-lg mt-4 w-full max-w-md">
                     <pre className="text-sm text-zinc-300 overflow-x-auto">
-                      <code>{`// Custom hook with React Query
+                      <code>{`// Custom hook with TanStack Query
 export const useGetUser = () => {
   const queryClient = useQueryClient()
   
@@ -964,7 +1004,7 @@ export const useGetUser = () => {
                               className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                             >
                               <Atom size={18} weight="duotone" />
-                              React Query Documentation
+                              TanStack Query Documentation
                             </a>
                           </li>
                         </ul>
@@ -996,6 +1036,17 @@ export const useGetUser = () => {
                             >
                               <Link size={18} weight="duotone" />
                               Phosphor Icons
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://reactrouter.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
+                            >
+                              <Link size={18} weight="duotone" />
+                              React Router DOM
                             </a>
                           </li>
                         </ul>
