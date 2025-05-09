@@ -9,7 +9,7 @@ export const useGetUser = () => {
       const response = await callApi('users/1', {
         method: 'GET',
       })
-      return response.data
+      return response?.data
     },
     enabled: false,
   })

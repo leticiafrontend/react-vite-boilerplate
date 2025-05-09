@@ -1,5 +1,6 @@
-import { Home } from '@pages'
 import { createBrowserRouter, type RouteObject } from 'react-router-dom'
+
+import Home from '@pages/home'
 
 import { HOME_PATH } from './paths'
 
